@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Greetings</title>
-</head>
-<body>
-<h1>Hello, master!</h1>
-</body>
-</html>
+{% extends 'layouts/layout.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+<div class="container-lg mt-3">
+  <div class="row">
+    <div class="col-12 col-md-10 col-lg-8 mx-auto border rounded-3 bg-light p-5" style="background-color: #dee2e6">
+      <h1 class="display-3 text-center">{% translate "Task manager" %}</h1>
+      <p class="lead text-center">{% translate "Set tasks, assign performers and change their statuses. To work with the system, registration and authentication are required." %}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
