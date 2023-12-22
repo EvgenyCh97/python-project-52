@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-21 16:40+0300\n"
+"POT-Creation-Date: 2023-12-22 12:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,33 +20,44 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: settings.py:122
+#: task_manager/settings.py:125
 msgid "English"
 msgstr ""
 
-#: settings.py:123
+#: task_manager/settings.py:126
 msgid "Russian"
 msgstr ""
 
-#: templates/components/header.html:7 templates/index.html:10
-#: templates/layouts/layout.html:9
+#: task_manager/templates/components/header.html:7
+#: task_manager/templates/index.html:10
+#: task_manager/templates/layouts/layout.html:9
 msgid "Task manager"
 msgstr "Менеджер задач"
 
-#: templates/components/header.html:8
+#: task_manager/templates/components/header.html:8
 msgid "Users"
 msgstr "Пользователи"
 
-#: templates/components/header.html:9
+#: task_manager/templates/components/header.html:9
 msgid "Login"
 msgstr "Вход"
 
-#: templates/components/header.html:10
+#: task_manager/templates/components/header.html:10
 msgid "Sign Up"
 msgstr "Регистрация"
 
-#: templates/index.html:11
+#: task_manager/templates/index.html:11
 msgid ""
 "Set tasks, assign performers and change their statuses. To work with the "
 "system, registration and authentication are required."
-msgstr "Ставьте задачи, назначайте исполнителей и меняйте их статусы. Для работы с системой требуется регистрация и аутентификация."
+msgstr ""
+"Ставьте задачи, назначайте исполнителей и меняйте их статусы. Для работы с "
+"системой требуется регистрация и аутентификация."
+
+#: task_manager/templates/users/index.html:7
+msgid "This is the users list page"
+msgstr ""
+
+#: task_manager/templates/users/index.html:9
+msgid "Our users:"
+msgstr ""
