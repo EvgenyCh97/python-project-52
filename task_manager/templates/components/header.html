@@ -5,7 +5,7 @@
     <header class="header" style="background-color: #212529">
       <nav class="navbar navbar-expand-md navbar-dark px-3">
           <a class="navbar-brand" href="/">{% translate "Task manager" %}</a>
-          <a class="navbar-nav nav-link flex-grow-1" href="/">{% translate "Users" %}</a>
+          <a class="navbar-nav nav-link flex-grow-1" href="{% url 'users' %}">{% translate "Users" %}</a>
         <a class="navbar-nav nav-link p-2" href="/">{% translate "Login" %}</a>
         <a class="navbar-nav nav-link p-2" href="/">{% translate "Sign Up" %}</a>
       </nav>
