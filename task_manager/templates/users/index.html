@@ -1,0 +1,23 @@
+{% extends 'layouts/layout.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+<div>
+    <h1>{% translate "Users" %}</h1>
+</div>
+<table>
+    
+</table>
+<h1>{% translate "This is the users list page" %}</h1>
+<div>
+    {% translate "Our users:" %}
+    <ul>
+        {% for user in users %}
+        <li>{{ user }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
