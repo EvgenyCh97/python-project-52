@@ -4,20 +4,36 @@
 
 {% block content %}
 
-<div>
-    <h1>{% translate "Users" %}</h1>
-</div>
-<table>
-    
-</table>
-<h1>{% translate "This is the users list page" %}</h1>
-<div>
-    {% translate "Our users:" %}
-    <ul>
-        {% for user in users %}
-        <li>{{ user }}</li>
-        {% endfor %}
-    </ul>
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{% translate "Users" %}</h1>
+    <table class="align-middle text-center table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>{% translate "User name" %}</th>
+                <th>{% translate "Full name" %}</th>
+                <th>{% translate "Date of registration" %}</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.full_name }}</td>
+                <td>{{ user.created_at }}</td>
+                <td class="d-flex justify-content-center">
+                    <a href="{% url 'user_update' user.id %}" class="btn btn-outline-primary mx-2">{% translate "Edit" %}</a>
+                    <form action="{% url 'user_delete' user.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-danger">{% translate 'Delete' %}</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 {% endblock %}
